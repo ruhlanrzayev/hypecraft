@@ -1,0 +1,260 @@
+/*          Primary Values          */
+@font-face {
+  font-family: "Minecraft";
+  src: url("../fonts/minecraft_font.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+/*----------------------------------*/
+/*          Mixin Values            */
+/*---------------------------------*/
+@media screen and (min-width: 888px) {
+  .container {
+    max-width: 968px;
+    margin: auto;
+  }
+  .super-container .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+  }
+  .super-container .container .home a {
+    font-size: 1.2em;
+    transition: 350ms;
+  }
+  .super-container .container .home a:hover {
+    color: #d8d8d8;
+  }
+  .super-container .container .bars {
+    display: none;
+  }
+  .super-container .container .menu {
+    display: none;
+  }
+  .super-container .container .menu-pc {
+    display: flex;
+  }
+  .super-container .container .menu-pc ul {
+    display: flex;
+    gap: 50px;
+  }
+  .super-container .container .menu-pc ul li a {
+    color: #FFF;
+    font: normal 1.2em "Roboto", sans-serif;
+    position: relative;
+    text-decoration: none;
+    transition: 350ms;
+  }
+  .super-container .container .menu-pc ul li a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #FFF;
+    transition: width 350ms;
+  }
+  .super-container .container .menu-pc ul li a:hover::after {
+    width: 100%;
+    background-color: #d8d8d8;
+  }
+  .super-container .container .menu-pc ul li a:hover {
+    color: #d8d8d8;
+  }
+  .super-container .container .login-button {
+    display: initial;
+  }
+  .super-container .container .login-button span {
+    cursor: pointer;
+    color: #FFF;
+    transition: 200ms ease-in-out;
+  }
+  .super-container .container .login-button span:hover {
+    color: #d8d8d8;
+  }
+  .super-container .container .login-button span i {
+    font-size: 2.5em;
+  }
+  .logo-container {
+    border-bottom: 2px solid transparent;
+    border-bottom-left-radius: 30%;
+    border-bottom-right-radius: 30%;
+  }
+  .logo-container::before {
+    border-bottom: 2px solid transparent;
+    border-bottom-left-radius: 30%;
+    border-bottom-right-radius: 30%;
+  }
+  .logo-container .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .logo-container .container .discord-ip, .logo-container .container .server-ip {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    color: #FFF;
+    cursor: pointer;
+    font: bold 1em "Roboto", sans-serif;
+  }
+  .logo-container .container .discord-ip span, .logo-container .container .server-ip span {
+    color: yellow;
+    text-transform: uppercase;
+  }
+  .logo-container .container .btn {
+    cursor: pointer;
+    background-color: #10415b;
+    padding: 10px 40px;
+    border-radius: 20px;
+    border: 2px solid #1d537a;
+    outline: none;
+    color: #FFF;
+    font: bold 1em "Roboto", sans-serif;
+    transition: 200ms ease-in-out;
+  }
+  .logo-container .container .btn i {
+    margin-right: 5px;
+  }
+  .logo-container .container .btn:hover {
+    background-color: #1668a3;
+  }
+  .logo-container .container img {
+    cursor: pointer;
+    max-width: 350px;
+    transition: 300ms ease;
+  }
+  .logo-container .container img:hover {
+    scale: 1.1;
+  }
+  .social-container {
+    display: none;
+  }
+  .slider-container {
+    padding-top: 20px;
+  }
+  .slider-container .container .swiper {
+    height: 500px;
+    border-radius: 10px;
+  }
+  .news-container {
+    top: 250px;
+  }
+  .news-container .container .top-text {
+    border-radius: 10px;
+  }
+  .news-container .news-content .news-card {
+    height: 300px;
+    display: flex;
+    align-items: flex-start;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .news-container .news-content .news-card .image {
+    height: 100%;
+  }
+  .news-container .news-content .news-card .image img {
+    width: 400px !important;
+    height: 100% !important;
+    object-fit: cover;
+  }
+  .news-container .news-content .news-card .content {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100%;
+  }
+  .news-container .news-content .news-card .content .card-top-text {
+    margin-top: 20px;
+  }
+  .news-container .news-content .news-card .content .card-top-text .description {
+    font-size: 1em !important;
+  }
+  .news-container .news-content .news-card .content .card-alt-text {
+    margin-bottom: 20px;
+  }
+  .news-container .news-content .news-card .content .card-alt-text button {
+    transition: 200ms ease;
+    cursor: pointer;
+  }
+  .news-container .news-content .news-card .content .card-alt-text button:hover {
+    background-color: #286485;
+  }
+  .details-container .top-text {
+    border-radius: 10px;
+  }
+  .details-container .details-card {
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .details-container .details-card .image img {
+    height: 100%;
+    object-fit: cover;
+  }
+  .details-container .details-card .content .card-top-text .description, .details-container .details-card .content .card-top-text .long-description {
+    font-size: 1em;
+  }
+  .animated-line {
+    top: 200px;
+  }
+  footer {
+    top: 200px;
+  }
+  footer .top-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  footer .top-content .first > p {
+    max-width: 200px;
+    font-size: 1em;
+    margin: 10px auto;
+    width: 100%;
+  }
+  footer .top-content p {
+    font-size: 1em;
+  }
+  footer .top-content .hoverA {
+    font-size: 1em;
+    position: relative;
+  }
+  footer .top-content .hoverA::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #FFF;
+    transition: width 350ms;
+  }
+  footer .top-content .hoverA:hover::after {
+    width: 100%;
+    background-color: #d8d8d8;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  footer .top-content .hoverA:hover {
+    color: #d8d8d8;
+  }
+  footer .alt-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 10px 0;
+    gap: 10px;
+  }
+  footer .alt-content span {
+    font-size: 1em !important;
+    color: #a8a8a8;
+  }
+}
+
+/*# sourceMappingURL=responsive.css.map */

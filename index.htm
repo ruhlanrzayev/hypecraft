@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="@ruhlanrzayev" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HypeCraft - Azərbaycanın Ən Böyük Minecraft Sunucusu!</title>
+
+    <!-- Fav Icon -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+
+    <!-- Custom SCSS -->
+    <link rel="stylesheet" href="scss/style.scss" />
+    <link rel="stylesheet" href="scss/responsive.scss" />
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+
+<body>
+
+    <!-- Navbar Container -->
+    <div class="super-container" id="superContainer">
+        <div class="container">
+            <!-- Icons and Menu -->
+            <div class="icons">
+                <div class="home">
+                    <a href="index.htm"><i class="fa-solid fa-house"></i></a>
+                </div>
+                <div class="bars">
+                    <span onclick="loginFunction()" style="margin-right: 10px;"><i class="fa-solid fa-arrow-right-to-bracket"></i></span>
+                    <span><i class="fa-solid fa-bars-staggered barsIcon"></i></span>
+                </div>
+            </div>
+            <div class="menu-pc">
+                <ul>
+                    <li><a href="#">Store</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">Wiki</a></li>
+                    <li><a href="#">Map</a></li>
+                    <li><a href="#">Vote</a></li>
+                    <li><a href="#">Support</a></li>
+                </ul>
+            </div>
+            <div class="login-button">
+                <span onclick="loginFunction()"><i class="fa-solid fa-arrow-right-to-bracket"></i></span>
+            </div>
+        </div>
+        <div class="menu mobile">
+            <ul>
+                <li><a href="#">Store</a></li>
+                <li><a href="#">Help</a></li>
+                <li><a href="#">Wiki</a></li>
+                <li><a href="#">Map</a></li>
+                <li><a href="#">Vote</a></li>
+                <li><a href="#">Support</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Logo Container -->
+    <div class="logo-container" id="logoContainer">
+        <div class="container">
+            <div class="server-ip">
+                <p>IP: <span class="copyButton" id="copyID">play.hypecraft.com</span></p>
+                <button class="btn copyButton"><i class="fa-solid fa-gamepad"></i> Copy</button>
+                <p><span>100</span> Player Active</p>
+            </div>
+            <div class="logo"><img src="assets/logo.png" alt="Logo Image"></div>
+            <div class="discord-ip">
+                <p>Discord Community</p>
+                <a class="btn" target="_blank" href="https://discord.gg/8vPHw2w4xp"><i class="fa-brands fa-discord"></i>
+                    Join</a>
+                <p><span>90/100</span> Active</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Social Container -->
+    <div class="social-container" id="socialContainer">
+        <div class="container">
+            <div class="server">
+                <p>IP: <span id="copyID" class="copyButton">play.hypecraft.com</span></p>
+                <button class="btn copyButton"><i class="fa-solid fa-gamepad"></i> Copy</button>
+                <p><span>100</span> Player Active</p>
+            </div>
+            <div class="discord">
+                <p>Discord Community</p>
+                <a class="btn" target="_blank" href="https://discord.gg/8vPHw2w4xp"><i class="fa-brands fa-discord"></i>
+                    Join</a>
+                <p><span>90/100</span> Active</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login / Register Container -->
+    <div class="login-container" id="loginContainer">
+
+    </div>
+
+    <!-- Slider Container -->
+    <div class="slider-container" id="sliderContainer">
+        <!-- Swiper -->
+        <div class="container">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide firstBack">
+
+                    </div>
+                    <div class="swiper-slide secondBack">
+
+                    </div>
+                    <div class="swiper-slide thirdBack">
+
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+                <div class="autoplay-progress">
+                    <svg viewBox="0 0 48 48">
+                        <circle cx="24" cy="24" r="20"></circle>
+                    </svg>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- News Container -->
+    <div class="news-container" id="newsContainer">
+        <div class="container">
+            <div class="top-text">
+                <h2>News</h2>
+            </div>
+            <div class="news-content" id="newsContent">
+                <!-- <div class="news-card" id="1">
+                    <div class="image"><img src="https://c4.wallpaperflare.com/wallpaper/948/782/354/minecraft-minecraft-dungeons-ocean-view-minecraft-dungeons-hidden-depths-4k-hd-wallpaper-preview.jpg" alt=""></div>
+                    <div class="content">
+                        <div class="card-top-text">
+                            <h2 class="heading">NEWS HEADING</h2>
+                            <p class="description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam totam
+                                commodi recusandae suscipit voluptas reiciendis dolor earum sequi hic, tempora molestias
+                                autem laboriosam quis qui, ut voluptatem minus distinctio sed!</p>
+                        </div>
+                        <div class="card-alt-text">
+                            <p class="date">16 March 2025</p>
+                            <button onclick="readMore()">Read More</button>
+                        </div>
+                    </div>|
+                </div> -->
+            </div>
+            <div class="news-pagination" id="newsPagination">
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Details Container -->
+    <div class="details-container" id="detailsContainer">
+        <div class="container">
+            <div class="details-content" id="detailsContent">
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Animated Line -->
+    <div class="animated-line"></div>
+
+    <!-- Footer Container -->
+    <footer>
+        <div class="container">
+            <div class="top-content">
+                <div class="first">
+                    <h3>About Us</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque non voluptatem minima
+                        doloremque, accusamus suscipit molestias perferendis unde nihil ipsa.</p>
+                </div>
+                <div class="second">
+                    <h3>Useful Links</h3>
+                    <a class="hoverA" href="#">Home</a>
+                    <a class="hoverA" href="#">Vote</a>
+                    <a class="hoverA" href="#">Support</a>
+                    <a class="hoverA" href="#">Rules & Policies</a>
+                    <a class="hoverA" href="#">Privacy Policy</a>
+                    <a class="hoverA" href="#">Terms of Service</a>
+                </div>
+                <div class="third">
+                    <h3>Social Media</h3>
+                    <a class="hoverA" href="#">Instagram</a>
+                    <a class="hoverA" href="#">TikTok</a>
+                    <a class="hoverA" href="#">YouTube</a>
+                    <a class="hoverA" href="#">Discord</a>
+                </div>
+                <div class="fourth">
+                    <h3>Contact</h3>
+                    <a class="hoverA" href="#">template@gmail.com</a>
+                    <a class="hoverA" href="#">GET TICKET</a>
+                </div>
+            </div>
+            <div class="alt-content">
+                <p>&copy; 2025 All Right Reserved.</p>
+                <span>We are in no way affiliated with or endorsed by Mojang.</span>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+    <script src="js/news.js"></script>
+
+    <!-- Sweet Alert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        const progressCircle = document.querySelector(".autoplay-progress svg");
+        const progressContent = document.querySelector(".autoplay-progress span");
+        var swiper = new Swiper(".mySwiper", {
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev"
+            },
+            on: {
+                autoplayTimeLeft(s, time, progress) {
+                    progressCircle.style.setProperty("--progress", 1 - progress);
+                    progressContent.textContent = `${Math.ceil(time / 1000)}s`;
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
